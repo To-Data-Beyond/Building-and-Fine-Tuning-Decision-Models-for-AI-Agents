@@ -1,0 +1,29 @@
+{
+  "about": "Small hand-written test set for Exercise 4 (airline customer messages). Used to reject near-duplicate training texts and for an optional evaluation after retraining.",
+  "presets": {
+    "airline": {
+      "prefix": "Airline customer message: ",
+      "question": "Which team should handle this message?",
+      "choices": {
+        "baggage": "lost, delayed or damaged bags, baggage allowance and fees",
+        "booking changes": "changing dates, flights, names or seats on an existing booking",
+        "loyalty": "frequent-flyer points, status tiers and member benefits",
+        "refunds": "money back for cancelled flights, unused tickets or extra charges"
+      }
+    }
+  },
+  "cases": [
+    {"id": "a01", "preset": "airline", "group": "airline", "text": "My suitcase did not arrive in Lisbon and the tracking number shows nothing.", "expected": "baggage"},
+    {"id": "a02", "preset": "airline", "group": "airline", "text": "Can I bring skis as a second checked item on my flight to Geneva?", "expected": "baggage"},
+    {"id": "a03", "preset": "airline", "group": "airline", "text": "The handle of my bag was broken when I collected it at the belt.", "expected": "baggage"},
+    {"id": "a04", "preset": "airline", "group": "airline", "text": "I need to move my return flight from Sunday to Tuesday.", "expected": "booking changes"},
+    {"id": "a05", "preset": "airline", "group": "airline", "text": "My last name is misspelled on the ticket. Can you correct it?", "expected": "booking changes"},
+    {"id": "a06", "preset": "airline", "group": "airline", "text": "Is it possible to switch to an aisle seat on the morning flight?", "expected": "booking changes"},
+    {"id": "a07", "preset": "airline", "group": "airline", "text": "The miles from my trip to Oslo never showed up in my account.", "expected": "loyalty"},
+    {"id": "a08", "preset": "airline", "group": "airline", "text": "How many flights do I need this year to keep my Gold status?", "expected": "loyalty"},
+    {"id": "a09", "preset": "airline", "group": "airline", "text": "Can my partner use my lounge access when we travel together?", "expected": "loyalty"},
+    {"id": "a10", "preset": "airline", "group": "airline", "text": "You cancelled my flight on 3 May and I still have not received my money.", "expected": "refunds"},
+    {"id": "a11", "preset": "airline", "group": "airline", "text": "I was charged twice for the same seat upgrade. Please return one payment.", "expected": "refunds"},
+    {"id": "a12", "preset": "airline", "group": "airline", "text": "I could not travel because of illness. Can I get my unused ticket refunded?", "expected": "refunds"}
+  ]
+}

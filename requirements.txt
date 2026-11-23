@@ -1,0 +1,5 @@
+# Core packages for notebooks 01-05 and 10 (replay and live Jev calls)
+pandas>=2.2
+matplotlib>=3.8
+certifi
+jinja2            # pandas Styler tables
